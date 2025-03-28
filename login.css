@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0, 81, 128);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li {
+    margin: 20px ;
+}
+
+ul li a {
+    margin-right: 15px;
+    text-decoration: solid;
+    color: white;
+    font-size: 22px;
+}
+
+ul li a:hover {
+    color: rgb(102, 30, 110);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 55px;
+    margin-right: 155px;
+    margin-top: 4px;
+}
+
+.header button {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 500;
+   overflow: hidden;
+}
+
+.header button:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.header h1 {
+    color: white;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.headercontent {
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    height: 59vh;
+    width: 28vw;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.188);
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+
+.headercontent h1 {
+    margin-top: 20px;
+    color: black;
+}
+
+.headercontent .input {
+    margin-left: 40px;
+    border-bottom: 2px solid #232020;
+    width: 80%;
+    padding-top: 25px;
+    margin-top: 35px;
+}
+
+.headercontent .input input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.0);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+}
+
+.input .la {
+    position: absolute;
+    top: 25%;
+    left: 50px;
+    color: #232020;
+    font-size: 1em;
+    pointer-events: none;
+}
+
+.input .lb {
+    position: absolute;
+    top: 42%;
+    left: 50px;
+    color: #232020;
+    font-size: 1em;
+    pointer-events: none;
+}
+
+/* Lift label when the input is focused or has value */
+.input input:focus ~ label,
+.input input:focus ~ .la,
+.input input:focus ~ .lb,
+.input input:valid ~ label,
+.input input:valid ~ .la,
+.input input:valid ~ .lb {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+/* Reset label position when input is empty and not focused */
+.input input:not(:focus):placeholder-shown ~ label,
+.input input:not(:focus):placeholder-shown ~ .la,
+.input input:not(:focus):placeholder-shown ~ .lb {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+/* Ensure this works for both email and password fields */
+.input input[type="email"]:not(:focus):placeholder-shown ~ label,
+.input input[type="password"]:not(:focus):placeholder-shown ~ label {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.headercontent .check {
+    color:black;
+    padding-top: 15px;
+}
+
+.headercontent button {
+    margin-top: 25px;
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    background-color: black;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.headercontent button:hover {
+    background: rgba(255, 255, 255, 0.0);;
+    color: black;
+    border: 3px solid black;
+}
+
+.headercontent .reg {
+    padding-top: 50px;
+    font-size: large;
+    font-weight: 800;
+}
+
+.headercontent .reg a {
+    text-decoration: solid;
+    color: #fff;
+}
+
+.headercontent .reg a:hover {
+    color: rgb(142, 36, 147);
+}
+
+.res {
+    position: absolute;
+    top: -25%;
+    left: 35%;
+    transform: scale(0.1);
+    height: 59vh;
+    width: 28vw;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.188);
+    border-radius: 15px;
+    border: 1px solid #fff;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.resop {
+    transform: scale(1);
+    top: 22%;
+    visibility: visible;
+}
+
+.res .hd {
+    margin-top: 25%;
+}
+
+.wr {
+    position: absolute;
+    top: -25%;
+    left: 35%;
+    transform: scale(0.1);
+    height: 59vh;
+    width: 28vw;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.188);
+    border-radius: 15px;
+    border: 1px solid #fff;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.wrop {
+    transform: scale(1);
+    top: 22%;
+    visibility: visible;
+}
+
+.wr .hd {
+    margin-top: 25%;
+}

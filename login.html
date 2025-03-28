@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const para = document.querySelector('button');
+
+            para.addEventListener('click', updateName);
+
+            function updateName() {
+                let name = prompt('Enter your call Name');
+                para.textContent = name;
+            }
+        })
+    </script>
+    <div class="header">
+        <nav>
+            <h1>Driftz</h1>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Control</a></li>
+                </ul>
+            </div>
+        </nav>
+        <button type="submit">Name</button>
+    </div>
+    <div class="headercontent">
+        <h1>Login</h1>
+        <div class="inputbox">
+        <div class="input">
+           <input class="ab" type="email" required>
+           <label for="" class="la">Email</label>
+        </div>
+        <div class="input">
+            <input class="cd" type="password" required>
+            <label for="" class="lb">Password</label>
+        </div>
+        </div>
+        <div class="check">
+            <input type="checkbox">
+            <b>Remember my password with email</b>
+        </div>
+        <button class="sub" type="submit">Log in </button>
+        <div class="reg">
+            <b>Don't have an account</b>
+            <a href="#">Register</a>
+        </div>
+        
+    </div>
+
+    <div class="res">
+        <div class="hd">
+            <img src="https://img.icons8.com/?size=100&id=11695&format=png&color=000000" alt="">
+            <h2>Logined</h2>
+        </div>
+        <div class="para">
+            <p>You have logined to your account</p>
+        </div>
+    </div>
+
+    <div class="wr">
+        <div class="hd">
+            <img src="https://img.icons8.com/?size=100&id=11695&format=png&color=000000" alt="">
+            <h2>Wrong Id/Password</h2>
+        </div>
+        <div class="para">
+            <p>Write correct Id or Password</p>
+        </div>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>
